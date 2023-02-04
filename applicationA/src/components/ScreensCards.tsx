@@ -58,7 +58,7 @@ export const ScreensCards: React.FC = () => {
                   text-gray-700 
                   mr-2 mb-2"
               >
-                #UAL
+                #UALL
               </span>
             </div>
           </div>
