@@ -15,7 +15,7 @@ export const AppB: React.FC<AppBProps> = ({ clickLogo }) => {
     <>
       <Header title="Header in Application B" clickLogo={clickLogo} />
       <div className="mt-10 text-3xl mx-auto max-w-6xl">
-        <div>Name: applicationB =)</div>
+        <div>Name: Application B =)</div>
         <div>Framework: react</div>
         <div>Language: TypeScript</div>
         <div>CSS: Tailwind</div>
