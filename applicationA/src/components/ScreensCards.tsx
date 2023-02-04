@@ -38,7 +38,10 @@ export const ScreensCards: React.FC = () => {
             </div>
             <div className="px-6 py-4">
               <Link to={path}>
-                <button className="px-6 py-2 text-sm rounded shadow text-black-500 transition bg-blue-100">
+                <button
+                  type="button"
+                  className="px-6 py-2 text-sm rounded shadow text-black-500 transition bg-blue-100"
+                >
                   {name}
                 </button>
               </Link>
@@ -55,7 +58,7 @@ export const ScreensCards: React.FC = () => {
                   text-gray-700 
                   mr-2 mb-2"
               >
-                #laia
+                #UAL
               </span>
             </div>
           </div>
