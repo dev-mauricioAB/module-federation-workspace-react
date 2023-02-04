@@ -8,6 +8,7 @@ interface ApplicationProps {
   name: string;
   path: string;
   description: string;
+  enabled: boolean;
 }
 
 export const ApplicationsCards: React.FC = () => {
@@ -17,11 +18,13 @@ export const ApplicationsCards: React.FC = () => {
       name: "Application A",
       path: "/appA",
       description: "Application A loren i",
+      enabled: true,
     },
     {
       name: "Application B",
       path: "/appB",
       description: "Application B loren i",
+      enabled: false,
     },
   ];
 
@@ -33,7 +36,7 @@ export const ApplicationsCards: React.FC = () => {
     <>
       <Header title="Header in common-workspace" clickLogo={handleHomeAction} />
       <div className="py-6 flex w-full justify-center items-center">
-        {applications.map(({ description, name, path }, index) => (
+        {applications.map(({ description, name, path, enabled }, index) => (
           <div
             className="max-w-sm rounded overflow-hidden shadow-lg m-1"
             key={index}
@@ -44,7 +47,16 @@ export const ApplicationsCards: React.FC = () => {
             </div>
             <div className="px-6 py-4">
               <Link to={path}>
-                <button className="px-6 py-2 text-sm rounded shadow text-black-500 transition bg-blue-100">
+                <button
+                  disabled={!enabled}
+                  type="button"
+                  className={`"
+                    px-6 py-2 text-sm rounded shadow text-black-500 transition
+                    ${
+                      enabled ? "bg-blue-300" : "bg-blue-100 cursor-not-allowed"
+                    }
+                  "`}
+                >
                   {name}
                 </button>
               </Link>

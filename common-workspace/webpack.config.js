@@ -50,8 +50,8 @@ module.exports = {
           "components_library@https://components-library-react.vercel.app/remoteEntry.js",
         ApplicationA:
           "applicationA@https://application-a.vercel.app/remoteEntry.js",
-        ApplicationB:
-          "applicationB@https://application-b.vercel.app/remoteEntry.js",
+        // ApplicationB:
+        //   "applicationB@https://application-b.vercel.app/remoteEntry.js",
       },
       exposes: {},
       shared: {
