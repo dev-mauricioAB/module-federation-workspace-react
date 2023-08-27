@@ -16,9 +16,10 @@ export const HomeView: React.FC = () => {
       <Header title="Header in Application A" clickLogo={() => navigate("/")} />
 
       <Routes>
-        <Route path="/" element={<ScreensCards />} />
-        <Route path="/screenA" element={<ScreenA />} />
-        <Route path="/screenB" element={<ScreenB />} />
+        <Route path="/" element={<Navigate to="/appA" />} />
+        <Route path="/appA" element={<ScreensCards />} />
+        <Route path="/appA/screenA" element={<ScreenA />} />
+        <Route path="/appA/screenB" element={<ScreenB />} />
       </Routes>
       <Footer title="Footer in Application A" />
     </div>

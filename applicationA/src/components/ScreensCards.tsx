@@ -14,12 +14,12 @@ export const ScreensCards: React.FC = () => {
   const applications: ApplicationProps[] = [
     {
       name: "Screen A",
-      path: "/screenA",
+      path: "/appA/screenA",
       description: "Screen A loren i",
     },
     {
       name: "Screen B",
-      path: "/screenB",
+      path: "/appA/screenB",
       description: "Screen B loren i",
     },
   ];
