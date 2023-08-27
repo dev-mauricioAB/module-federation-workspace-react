@@ -11,7 +11,8 @@ export const AppA: React.FC = () => <HomeView />;
 const isEmbedded = window.location.pathname.startsWith("/appA");
 
 ReactDOM.render(
-  <BrowserRouter basename={isEmbedded ? "/appA" : ""}>
+  // <BrowserRouter basename={isEmbedded ? "/appA" : ""}>
+  <BrowserRouter basename="/">
     <AppA />
   </BrowserRouter>,
   document.getElementById("app")
