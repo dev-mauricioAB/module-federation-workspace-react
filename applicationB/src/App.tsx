@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./index.scss";
 
@@ -25,4 +26,9 @@ export const AppB: React.FC<AppBProps> = ({ clickLogo }) => {
   );
 };
 
-ReactDOM.render(<AppB />, document.getElementById("app"));
+import "./index.scss";
+
+const container = document.getElementById("app");
+const root = createRoot(container!);
+
+root.render(<AppB />);

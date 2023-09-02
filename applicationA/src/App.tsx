@@ -1,19 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { HomeView } from "./views/HomeView";
 
 import "./index.scss";
 
-export const AppA: React.FC = () => <HomeView />;
+const container = document.getElementById("app");
+const root = createRoot(container!);
 
-const isEmbedded = window.location.pathname.startsWith("/appA");
-
-ReactDOM.render(
-  // <BrowserRouter basename={isEmbedded ? "/appA" : ""}>
+const AppA = () => <HomeView />;
+root.render(
   <BrowserRouter basename="/">
     <AppA />
-  </BrowserRouter>,
-  document.getElementById("app")
+  </BrowserRouter>
 );

@@ -1,11 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 
 import { HomeView } from "./views/HomeView";
 
 import "./index.scss";
 
-const App = () => <HomeView />;
+const container = document.getElementById("app");
+const root = createRoot(container!);
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const App = () => <HomeView />;
+root.render(<App />);

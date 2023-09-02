@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import "./index.scss";
@@ -8,9 +8,13 @@ import { HomeView } from "./views/HomeView";
 
 const App = () => <HomeView />;
 
-ReactDOM.render(
+import "./index.scss";
+
+const container = document.getElementById("app");
+const root = createRoot(container!);
+
+root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-  document.getElementById("app")
+  </BrowserRouter>
 );
