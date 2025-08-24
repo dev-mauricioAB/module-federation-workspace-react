@@ -2,7 +2,7 @@ declare module "ApplicationA/AppA" {
   interface AppBProps {
     clickLogo: () => void;
   }
-  const AppA: React.FC<AppBProps>;
+  const AppA: ReactNode<AppBProps>;
 
   export { AppA };
 }
